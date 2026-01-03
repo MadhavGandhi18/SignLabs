@@ -1,22 +1,10 @@
 # 🚀 Project Title
 
-Title: SignLapse
+Title: SignLabs
+
+---
 
 Tagline: Breaking the communication barrier
-
----
-
-## 📌 Problem Statement
-
-Problem Statement 8 – Reimagine peer to peer learning and mentorship.
-
-Millions of deaf and hard-of-hearing individuals struggle with communication in public and digital spaces.
-
-Sign language interpreters aren't always available.
-
-Real-time accessibility is still missing in many systems.
-
----
 
 ## 🎯 Objective
 

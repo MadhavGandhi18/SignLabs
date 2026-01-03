@@ -14,27 +14,6 @@ Helps bridge the communication gap between hearing and non-hearing individuals.
 
 ---
 
-## 🧠 Team & Approach
-
-### Team Name:  
-Prodigy
-
-### Team Members:  
-- Madhav Gandhi (https://github.com/MadhavGandhi18 / www.linkedin.com/in/madhav-gandhi-478153354 / Team Leader and AI-ML Engineer)  
-- Manmeer Singh  
-- Krish Singh Nitwal  
-
-Why we chose this problem:
-We wanted to make peer learning and mentorship truly inclusive. Millions who use Indian Sign Language are left out of everyday conversations, lectures, and mentor sessions. We saw this gap—and knew tech could bridge it.
-
-Challenges we faced:
-Getting avatars to sign in real-time wasn't easy. ISL has unique grammar, and syncing voice to smooth, human-like gestures took a lot of trial and error. We also had limited datasets to work with, which made training and mapping signs a real challenge.
-
-Our turning point:
-Midway, we switched from basic video stitching to Unity-based animated avatars—and it changed everything. The output felt alive, expressive, and finally something we were proud to demo.
-
----
-
 ## 🛠️ Tech Stack
 
 ### Core Technologies Used:
@@ -101,27 +80,6 @@ Google Colab (for model inference if not running locally)
 Basic system with GPU (optional but recommended)
 Internet connection (for speech-to-text API)
 
-### Local Setup:
-
-# 1. Clone the repo
-git clone https://github.com/your-team/signlapse
-cd signlapse
-
-# 2. Set up Python environment
-python -m venv venv
-source venv/bin/activate  # Use venv\Scripts\activate on Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-Make sure to setup next js server files as they are not in repo for security.
-Also setup the complete environment for tensorflow for sign language.
-
-# 4. (Optional) Download pre-trained models or datasets
-# Place them in the 'models/' and 'data/' folders respectively
-
-# 5. Run the backend script
-python main.py
-
 ---
 
 ## 🧬 Future Scope
@@ -149,17 +107,9 @@ A feature to help users actually learn Indian Sign Language using interactive av
 
 ---
 
-## 📎 Resources / Credits
-
-Indian Sign Language Dataset (ISL Dataset) – Used for training gesture recognition and sign translation
-Google Speech-to-Text API – For converting spoken input into text
-MoCap Gesture Datasets – For improving avatar movement realism 
-
----
-
 ## 🏁 Final Words
 
-Building SignLapse wasn’t just about code—it was about connection.
+Building SignLabs wasn’t just about code—it was about connection.
 
 SignLapse started as an idea, but turned into something way more meaningful. We weren’t just building tech—we were building a voice for those often unheard.
 From endless bugs to "aha!" moments, this journey was challenging, fun, and deeply fulfilling.

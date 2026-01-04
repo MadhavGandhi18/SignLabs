@@ -72,6 +72,40 @@ Internet connection (for speech-to-text API)
 
 ---
 
+## 🧬 Future Scope
+
+We’re just scratching the surface with SignLapse—there’s so much more we’re excited to build:
+
+1. Multilingual Sign Support
+Expanding beyond Indian Sign Language to include ASL, BSL, and regional variants, making it a global tool for inclusivity.
+
+2. Real-Time Two-Way Communication
+Adding the ability to convert sign language back into text or speech, enabling smoother conversations between deaf and hearing users.
+
+3. Smarter Gesture Prediction
+Using more advanced AI to understand context, emotions, and sentence flow for even more natural avatar movements.
+
+4. Mobile & Web Integration
+Bringing SignLapse to phones, tablets, and browsers so it’s always accessible—anytime, anywhere.
+
+5. Plug-and-Play for Platforms
+Easy integration with platforms like Google Meet, Zoom, and learning management systems to break down communication barriers in real-time.
+
+6. Learning Mode for ISL
+A feature to help users actually learn Indian Sign Language using interactive avatars—fun and functional!
+
+---
+
+## 🏁 Final Words
+
+Building SignLabs wasn’t just about code—it was about connection.
+
+SignLapse started as an idea, but turned into something way more meaningful. We weren’t just building tech—we were building a voice for those often unheard.
+From endless bugs to "aha!" moments, this journey was challenging, fun, and deeply fulfilling.
+We’re proud of what we created, and even more excited about where it can go next. This is just the beginning.
+
+---
+
 ## Technical FLow Diagram
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#007bff', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f4f4f4'}}}%%
@@ -99,40 +133,4 @@ graph LR
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style H fill:#9f9,stroke:#333,stroke-width:2px
     style F fill:#ffcb77,stroke:#333,stroke-width:2px
-
-## 🧬 Future Scope
-
-We’re just scratching the surface with SignLapse—there’s so much more we’re excited to build:
-
-1. Multilingual Sign Support
-Expanding beyond Indian Sign Language to include ASL, BSL, and regional variants, making it a global tool for inclusivity.
-
-2. Real-Time Two-Way Communication
-Adding the ability to convert sign language back into text or speech, enabling smoother conversations between deaf and hearing users.
-
-3. Smarter Gesture Prediction
-Using more advanced AI to understand context, emotions, and sentence flow for even more natural avatar movements.
-
-4. Mobile & Web Integration
-Bringing SignLapse to phones, tablets, and browsers so it’s always accessible—anytime, anywhere.
-
-5. Plug-and-Play for Platforms
-Easy integration with platforms like Google Meet, Zoom, and learning management systems to break down communication barriers in real-time.
-
-6. Learning Mode for ISL
-A feature to help users actually learn Indian Sign Language using interactive avatars—fun and functional!
-
-` ``` `
-
----
-
-## 🏁 Final Words
-
-Building SignLabs wasn’t just about code—it was about connection.
-
-SignLapse started as an idea, but turned into something way more meaningful. We weren’t just building tech—we were building a voice for those often unheard.
-From endless bugs to "aha!" moments, this journey was challenging, fun, and deeply fulfilling.
-We’re proud of what we created, and even more excited about where it can go next. This is just the beginning.
-
----
 

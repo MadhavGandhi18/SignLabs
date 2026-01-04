@@ -72,6 +72,26 @@ Internet connection (for speech-to-text API)
 
 ---
 
+## Mermaid Diagram
+flowchart LR
+    A[User Speech Input<br/>(Live / Pre-recorded)] --> B[Speech Recognition API<br/>(Voice → Text)]
+
+    B --> C[Gemini API<br/>(Language Translation<br/>+ Sentence Normalization)]
+
+    C --> D[ISL Processing Engine<br/>(Grammar Mapping<br/>+ Sign Sequencing)]
+
+    D --> E[MediaPipe<br/>(Hand, Body & Pose Keypoints)]
+
+    E --> F[Avatar Animation Engine<br/>(Blender + Python)]
+
+    F --> G[Real-time ISL Avatar Output<br/>(Video / Stream)]
+
+    %% Optional Modules
+    G --> H[Platform Integration Layer<br/>(Zoom / Google Meet / LMS)]
+
+
+---
+
 ## 🧬 Future Scope
 
 We’re just scratching the surface with SignLapse—there’s so much more we’re excited to build:

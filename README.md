@@ -72,32 +72,14 @@ Internet connection (for speech-to-text API)
 
 ---
 
-## Mermaid Diagram
-flowchart LR
-    A[User Speech Input<br/>(Live / Pre-recorded)] --> B[Speech Recognition API<br/>(Voice → Text)]
-
-    B --> C[Gemini API<br/>(Language Translation<br/>+ Sentence Normalization)]
-
-    C --> D[ISL Processing Engine<br/>(Grammar Mapping<br/>+ Sign Sequencing)]
-
-    D --> E[MediaPipe<br/>(Hand, Body & Pose Keypoints)]
-
-    E --> F[Avatar Animation Engine<br/>(Blender + Python)]
-
-    F --> G[Real-time ISL Avatar Output<br/>(Video / Stream)]
-
-    %% Optional Modules
-    G --> H[Platform Integration Layer<br/>(Zoom / Google Meet / LMS)]
-
----
-
 ## Technical FLow Diagram
+```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#007bff', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f4f4f4'}}}%%
 graph LR
     subgraph Input Layer
         A[🎙️ User Voice / Audio] --> B(Speech Recognition API);
     end
-
+    
     subgraph Processing Core
         B -->|Raw Text| C{🐍 Python Backend};
         C -->|Text for Translation| D[✨ Gemini API];

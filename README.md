@@ -89,6 +89,34 @@ flowchart LR
     %% Optional Modules
     G --> H[Platform Integration Layer<br/>(Zoom / Google Meet / LMS)]
 
+---
+
+## Technical FLow Diagram
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#007bff', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f4f4f4'}}}%%
+graph LR
+    subgraph Input Layer
+        A[🎙️ User Voice / Audio] --> B(Speech Recognition API);
+    end
+
+    subgraph Processing Core
+        B -->|Raw Text| C{🐍 Python Backend};
+        C -->|Text for Translation| D[✨ Gemini API];
+        D -->|Translated Text| C;
+        C -- ISL Grammar Logic --> E[Converting Eng/Hindi to ISL Gloss];
+    end
+
+    subgraph Animation Engine
+        E -->|Pose & Animation Data| F[🎥 Blender Real-time Engine];
+        F -- Rendering Avatar --> G(Lifelike Avatar Model);
+    end
+
+    subgraph Output Layer
+        G -->|Video Stream| H[🖥️ Final UI Display];
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style H fill:#9f9,stroke:#333,stroke-width:2px
+    style F fill:#ffcb77,stroke:#333,stroke-width:2px
 
 ---
 

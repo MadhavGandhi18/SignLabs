@@ -79,7 +79,7 @@ graph LR
     subgraph Input Layer
         A[🎙️ User Voice / Audio] --> B(Speech Recognition API);
     end
-    
+
     subgraph Processing Core
         B -->|Raw Text| C{🐍 Python Backend};
         C -->|Text for Translation| D[✨ Gemini API];
@@ -99,8 +99,6 @@ graph LR
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style H fill:#9f9,stroke:#333,stroke-width:2px
     style F fill:#ffcb77,stroke:#333,stroke-width:2px
-
----
 
 ## 🧬 Future Scope
 
@@ -124,6 +122,7 @@ Easy integration with platforms like Google Meet, Zoom, and learning management 
 6. Learning Mode for ISL
 A feature to help users actually learn Indian Sign Language using interactive avatars—fun and functional!
 
+` ``` `
 
 ---
 
@@ -136,3 +135,4 @@ From endless bugs to "aha!" moments, this journey was challenging, fun, and deep
 We’re proud of what we created, and even more excited about where it can go next. This is just the beginning.
 
 ---
+

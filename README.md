@@ -56,8 +56,21 @@ graph LR
     style F fill:#ffcb77,stroke:#333,stroke-width:2px
 ```
 ---
-WORK FLOW
-![SignLabs Demo](if/0.gif)
+## 🎬 Project Walkthrough (Visual Demo)
+
+<p align="center">
+  <img src="if/0.gif" alt="SignLabs Demo 1" width="300"/>
+  <img src="if/1.gif" alt="SignLabs Demo 2" width="300"/>
+</p>
+
+<p align="center">
+  <img src="if/2.gif" alt="SignLabs Demo 3" width="300"/>
+  <img src="if/3.gif" alt="SignLabs Demo 4" width="300"/>
+</p>
+
+<p align="center">
+  <img src="if/4.gif" alt="SignLabs Demo 5" width="300"/>
+</p>
 
 
 

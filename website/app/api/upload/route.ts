@@ -1,15 +1,20 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
-import { existsSync, mkdirSync } from 'fs';
+import { NextRequest, NextResponse } from "next/server";
+import { writeFile } from "fs/promises";
+import { join } from "path";
+import { existsSync, mkdirSync } from "fs";
 
-// Updated configuration for Next.js Edge runtime
-export const runtime = 'edge';
+// Uses Node.js APIs (fs/path/Buffer), so this route must run on the Node.js runtime.
+export const runtime = "nodejs";
 
 const ALLOWED_FILE_TYPES = {
-  video: ['video/mp4', 'video/quicktime'],
-  audio: ['audio/mpeg', 'audio/wav', 'audio/x-m4a'],
-  document: ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'],
+  video: ["video/mp4", "video/quicktime"],
+  audio: ["audio/mpeg", "audio/wav", "audio/x-m4a"],
+  document: [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "text/plain",
+  ],
 };
 
 const MAX_FILE_SIZES = {
@@ -22,40 +27,44 @@ const MAX_FILE_SIZES = {
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    const file = formData.get('file') as File;
-    const fileType = formData.get('fileType') as string;
-    
+    const file = formData.get("file") as File;
+    const fileType = formData.get("fileType") as string;
+
     if (!file) {
+      return NextResponse.json({ error: "No file received." }, { status: 400 });
+    }
+
+    if (!fileType || !["video", "audio", "document"].includes(fileType)) {
       return NextResponse.json(
-        { error: 'No file received.' },
+        { error: "Invalid file type." },
         { status: 400 }
       );
     }
 
-    if (!fileType || !['video', 'audio', 'document'].includes(fileType)) {
-      return NextResponse.json(
-        { error: 'Invalid file type.' },
-        { status: 400 }
-      );
-    }
-
-    const allowedMimeTypes = ALLOWED_FILE_TYPES[fileType as keyof typeof ALLOWED_FILE_TYPES] || [];
+    const allowedMimeTypes =
+      ALLOWED_FILE_TYPES[fileType as keyof typeof ALLOWED_FILE_TYPES] || [];
     if (!allowedMimeTypes.includes(file.type)) {
       return NextResponse.json(
-        { error: `Invalid file format. Allowed formats for ${fileType}: ${allowedMimeTypes.join(', ')}` },
+        {
+          error: `Invalid file format. Allowed formats for ${fileType}: ${allowedMimeTypes.join(", ")}`,
+        },
         { status: 400 }
       );
     }
 
-    const maxSize = MAX_FILE_SIZES[fileType as keyof typeof MAX_FILE_SIZES] || MAX_FILE_SIZES.default;
+    const maxSize =
+      MAX_FILE_SIZES[fileType as keyof typeof MAX_FILE_SIZES] ||
+      MAX_FILE_SIZES.default;
     if (file.size > maxSize) {
       return NextResponse.json(
-        { error: `File too large. Maximum allowed size for ${fileType}: ${maxSize / (1024 * 1024)}MB` },
+        {
+          error: `File too large. Maximum allowed size for ${fileType}: ${maxSize / (1024 * 1024)}MB`,
+        },
         { status: 400 }
       );
     }
 
-    const uploadDir = join(process.cwd(), 'public', 'uploads');
+    const uploadDir = join(process.cwd(), "public", "uploads");
     if (!existsSync(uploadDir)) {
       mkdirSync(uploadDir, { recursive: true });
     }
@@ -65,7 +74,7 @@ export async function POST(request: NextRequest) {
       mkdirSync(typeDir, { recursive: true });
     }
 
-    const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
+    const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, "_");
     const uniqueFilename = `${Date.now()}-${sanitizedName}`;
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
@@ -74,27 +83,27 @@ export async function POST(request: NextRequest) {
     await writeFile(filePath, buffer);
 
     const fileUrl = `/uploads/${fileType}/${uniqueFilename}`;
-    
-    return NextResponse.json({ 
-      message: 'File uploaded successfully',
+
+    return NextResponse.json({
+      message: "File uploaded successfully",
       filePath: fileUrl,
       url: fileUrl,
       fileName: sanitizedName,
       fileSize: file.size,
-      mimeType: file.type
+      mimeType: file.type,
     });
-
   } catch (error) {
-    console.error('Upload error:', error);
-    
-    const errorMessage = error instanceof Error 
-      ? error.message 
-      : 'An unknown error occurred during file upload.';
-      
+    console.error("Upload error:", error);
+
+    const errorMessage =
+      error instanceof Error
+        ? error.message
+        : "An unknown error occurred during file upload.";
+
     return NextResponse.json(
-      { 
-        error: 'Failed to upload file.', 
-        details: errorMessage 
+      {
+        error: "Failed to upload file.",
+        details: errorMessage,
       },
       { status: 500 }
     );

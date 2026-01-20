@@ -92,7 +92,7 @@ export default function AnimatedHero({
             className="mb-12"
           >
             <div className="flex flex-col gap-8">
-              <h1 className="text-7xl leading-tight font-bold bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] bg-clip-text text-transparent drop-shadow-sm max-w-4xl">
+              <h1 className="text-7xl leading-tight font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent drop-shadow-sm max-w-4xl">
                 {slides[currentSlide].title}
               </h1>
               <p className="text-xl text-gray-800 max-w-2xl">
@@ -130,7 +130,7 @@ export default function AnimatedHero({
             <motion.button
               key={index}
               className={`w-2 h-2 rounded-full ${
-                currentSlide === index ? 'bg-[#8B5CF6]' : 'bg-gray-400/30'
+                currentSlide === index ? 'bg-primary' : 'bg-gray-400/30'
               }`}
               onClick={() => setCurrentSlide(index)}
               whileHover={{ scale: 1.2 }}

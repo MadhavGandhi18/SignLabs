@@ -10,8 +10,10 @@ html {
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 6, 30, 23;
   --background-rgb: 255, 255, 255;
+  --primary-rgb: 13, 148, 136;
+  --primary-dark-rgb: 6, 95, 82;
   --scroll-margin-top: 100px;
 }
 
@@ -33,7 +35,7 @@ section {
   }
   
   .btn-secondary {
-    @apply bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-surface-dark transition-all duration-200 ease-in-out;
+    @apply bg-surface border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary/5 transition-all duration-200 ease-in-out;
   }
   
   .btn-outline {

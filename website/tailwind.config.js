@@ -9,10 +9,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#0066FF',
-        secondary: '#111827',
-        accent: '#10B981',
-        'primary-dark': '#0047B3',
+        primary: '#0d9488',
+        secondary: '#064e3b',
+        accent: '#14B8A6',
+        'primary-dark': '#065f52',
         'gray-light': '#F3F4F6',
         'gray-medium': '#9CA3AF',
         'gray-dark': '#4B5563',
@@ -27,7 +27,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-primary': 'linear-gradient(135deg, #0066FF 0%, #0047B3 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #0d9488 0%, #065f52 100%)',
       },
     },
   },

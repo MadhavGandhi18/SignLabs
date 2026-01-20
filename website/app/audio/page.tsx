@@ -17,7 +17,7 @@ export default function AudioTranslation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center">
-              <div className="bg-[#A78BFA] p-2 rounded-xl hover:rotate-12 transition-transform">
+              <div className="bg-primary/10 p-2 rounded-xl hover:rotate-12 transition-transform">
                 <Image 
                   src="/images/hand-icon.svg"
                   alt="Hand Icon" 
@@ -50,8 +50,8 @@ export default function AudioTranslation() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">How it Works</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
-                    <span className="text-[#8B5CF6] font-semibold">1</span>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold">1</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">Upload Your Audio</h3>
@@ -59,8 +59,8 @@ export default function AudioTranslation() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
-                    <span className="text-[#8B5CF6] font-semibold">2</span>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold">2</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">AI Processing</h3>
@@ -68,8 +68,8 @@ export default function AudioTranslation() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
-                    <span className="text-[#8B5CF6] font-semibold">3</span>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold">3</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">Download Result</h3>

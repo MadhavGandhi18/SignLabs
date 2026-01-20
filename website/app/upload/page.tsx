@@ -134,7 +134,7 @@ export default function Upload() {
             <Link href="/" className="flex items-center">
               <motion.div
                 whileHover={{ rotate: 20 }}
-                className="bg-[#A78BFA] p-2 rounded-xl"
+                 className="bg-primary/10 p-2 rounded-xl"
               >
                 <Image 
                   src="/images/hand-icon.svg"
@@ -170,8 +170,8 @@ export default function Upload() {
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg border-2 transition-all ${
                   isUploading ? 'opacity-50 cursor-not-allowed' :
                   selectedType === 'video'
-                    ? 'border-[#8B5CF6] bg-[#8B5CF6]/5 text-[#8B5CF6]'
-                    : 'border-gray-200 hover:border-[#8B5CF6] hover:bg-[#8B5CF6]/5'
+                      ? 'border-primary bg-primary/5 text-primary'
+                    : 'border-gray-200 hover:border-primary hover:bg-primary/5'
                 }`}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,8 +191,8 @@ export default function Upload() {
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg border-2 transition-all ${
                   isUploading ? 'opacity-50 cursor-not-allowed' :
                   selectedType === 'document'
-                    ? 'border-[#8B5CF6] bg-[#8B5CF6]/5 text-[#8B5CF6]'
-                    : 'border-gray-200 hover:border-[#8B5CF6] hover:bg-[#8B5CF6]/5'
+                      ? 'border-primary bg-primary/5 text-primary'
+                    : 'border-gray-200 hover:border-primary hover:bg-primary/5'
                 }`}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -212,8 +212,8 @@ export default function Upload() {
                 className={`flex items-center gap-2 px-6 py-3 rounded-lg border-2 transition-all ${
                   isUploading ? 'opacity-50 cursor-not-allowed' :
                   selectedType === 'audio'
-                    ? 'border-[#8B5CF6] bg-[#8B5CF6]/5 text-[#8B5CF6]'
-                    : 'border-gray-200 hover:border-[#8B5CF6] hover:bg-[#8B5CF6]/5'
+                      ? 'border-primary bg-primary/5 text-primary'
+                    : 'border-gray-200 hover:border-primary hover:bg-primary/5'
                 }`}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -237,7 +237,7 @@ export default function Upload() {
                 {...getRootProps()} 
                 className={`border-2 border-dashed ${
                   isUploading ? 'border-gray-300 bg-gray-50' :
-                  isDragActive ? 'border-[#8B5CF6] bg-[#8B5CF6]/5' : 'border-gray-300'
+                    isDragActive ? 'border-primary bg-primary/5' : 'border-gray-300'
                 } rounded-lg p-12 cursor-pointer transition-colors ${
                   isUploading ? 'cursor-not-allowed' : 'cursor-pointer'
                 }`}
@@ -252,7 +252,7 @@ export default function Upload() {
                         </svg>
                       </div>
                     ) : file ? (
-                      <div className="flex items-center gap-2 text-[#8B5CF6]">
+                      <div className="flex items-center gap-2 text-primary">
                         <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -268,11 +268,11 @@ export default function Upload() {
                       <p className="text-green-500 font-medium">Upload successful!</p>
                     ) : file ? (
                       <>
-                        <p className="text-[#8B5CF6] font-medium">{file.name}</p>
+                        <p className="text-primary font-medium">{file.name}</p>
                         {uploadProgress > 0 && uploadProgress < 100 && (
                           <div className="w-full h-2 bg-gray-200 rounded-full mt-2">
                             <div 
-                              className="h-full bg-[#8B5CF6] rounded-full transition-all duration-300"
+                              className="h-full bg-primary rounded-full transition-all duration-300"
                               style={{ width: `${uploadProgress}%` }}
                             />
                           </div>
@@ -280,8 +280,8 @@ export default function Upload() {
                         <button 
                           onClick={handleUpload}
                           disabled={isUploading}
-                          className={`mt-4 px-6 py-2 bg-[#8B5CF6] text-white rounded-lg transition-colors ${
-                            isUploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#7C3AED]'
+                          className={`mt-4 px-6 py-2 bg-primary text-white rounded-lg transition-colors ${
+                            isUploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary-dark'
                           }`}
                         >
                           {isUploading ? 'Uploading...' : 'Start Translation'}
@@ -295,8 +295,8 @@ export default function Upload() {
                             : `Drag your ${selectedType} here to import`}
                         </p>
                         <button 
-                          className={`mt-4 px-6 py-2 bg-[#8B5CF6] text-white rounded-lg transition-colors ${
-                            isUploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#7C3AED]'
+                          className={`mt-4 px-6 py-2 bg-primary text-white rounded-lg transition-colors ${
+                            isUploading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary-dark'
                           }`}
                           disabled={isUploading}
                         >

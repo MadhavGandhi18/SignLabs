@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFile } from "fs/promises";
-import { join } from "path";
-import { existsSync, mkdirSync } from "fs";
+import { put } from "@vercel/blob";
 
-// Uses Node.js APIs (fs/path/Buffer), so this route must run on the Node.js runtime.
+// Use Node.js runtime (supported on Vercel Serverless Functions).
 export const runtime = "nodejs";
 
 const ALLOWED_FILE_TYPES = {
@@ -64,30 +62,30 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const uploadDir = join(process.cwd(), "public", "uploads");
-    if (!existsSync(uploadDir)) {
-      mkdirSync(uploadDir, { recursive: true });
-    }
-
-    const typeDir = join(uploadDir, fileType);
-    if (!existsSync(typeDir)) {
-      mkdirSync(typeDir, { recursive: true });
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      return NextResponse.json(
+        {
+          error:
+            "Missing BLOB_READ_WRITE_TOKEN. Create a Vercel Blob store and add its Read/Write token as an Environment Variable.",
+        },
+        { status: 500 }
+      );
     }
 
     const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, "_");
-    const uniqueFilename = `${Date.now()}-${sanitizedName}`;
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
+    const pathname = `${fileType}/${Date.now()}-${sanitizedName}`;
 
-    const filePath = join(typeDir, uniqueFilename);
-    await writeFile(filePath, buffer);
-
-    const fileUrl = `/uploads/${fileType}/${uniqueFilename}`;
+    const blob = await put(pathname, file, {
+      access: "public",
+      contentType: file.type,
+      addRandomSuffix: true,
+    });
 
     return NextResponse.json({
       message: "File uploaded successfully",
-      filePath: fileUrl,
-      url: fileUrl,
+      filePath: blob.url,
+      url: blob.url,
+      pathname: blob.pathname,
       fileName: sanitizedName,
       fileSize: file.size,
       mimeType: file.type,

@@ -50,7 +50,7 @@ export default function Navbar({ onScrollToSection }: NavbarProps) {
           <Link href="/" className="flex items-center gap-3">
             <motion.div
               whileHover={{ rotate: 20 }}
-              className="bg-[#A78BFA] p-2 rounded-xl"
+              className="bg-primary/10 p-2 rounded-xl"
             >
               <Image 
                 src="/images/hand-icon.svg"
@@ -78,14 +78,14 @@ export default function Navbar({ onScrollToSection }: NavbarProps) {
             </button>
             <Link 
               href="/files/sign-language-extension.zip" 
-              className="border border-[#8B5CF6] text-[#8B5CF6] px-3 py-1.5 md:px-4 md:py-2 rounded-lg hover:bg-[#8B5CF6] hover:text-white transition-colors text-sm md:text-base"
+              className="border border-primary text-primary px-3 py-1.5 md:px-4 md:py-2 rounded-lg hover:bg-primary hover:text-white transition-colors text-sm md:text-base"
               download="SignLanguageExtension.zip"
             >
               Get Extension
             </Link>
             <Link 
               href="/auth/login"
-              className="bg-[#8B5CF6] text-white px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg hover:bg-[#7C3AED] transition-colors font-medium shadow-md text-sm md:text-base"
+              className="bg-primary text-white px-3 py-1.5 md:px-5 md:py-2.5 rounded-lg hover:bg-primary-dark transition-colors font-medium shadow-md text-sm md:text-base"
               prefetch={true}
             >
               Sign In

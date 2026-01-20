@@ -101,7 +101,7 @@ export default function HeroSection({ slides }: HeroSectionProps) {
             className="mb-12 text-left"
           >
             <div className="flex flex-col gap-8">
-              <h1 className="text-7xl leading-tight font-bold bg-gradient-to-r from-[#8B5CF6] to-[#A78BFA] bg-clip-text text-transparent drop-shadow-sm max-w-4xl">
+              <h1 className="text-7xl leading-tight font-bold bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent drop-shadow-sm max-w-4xl">
                 Sign Language Translation
               </h1>
             </div>
@@ -116,10 +116,10 @@ export default function HeroSection({ slides }: HeroSectionProps) {
           className="flex gap-4 mt-12 justify-start"
         >
           <Link href="/video">
-            <motion.button
+              <motion.button
               className={`px-6 py-2 rounded-lg shadow-sm ${
                 currentSlide === 0 
-                  ? 'bg-[#8B5CF6] text-white' 
+                  ? 'bg-primary text-white' 
                   : 'bg-white text-gray-800 hover:bg-white/90 transition-colors'
               }`}
               whileHover={{ scale: 1.02 }}
@@ -132,7 +132,7 @@ export default function HeroSection({ slides }: HeroSectionProps) {
             <motion.button
               className={`px-6 py-2 rounded-lg shadow-sm ${
                 currentSlide === 1 
-                  ? 'bg-[#8B5CF6] text-white' 
+                  ? 'bg-primary text-white' 
                   : 'bg-white text-gray-800 hover:bg-white/90 transition-colors'
               }`}
               whileHover={{ scale: 1.02 }}
@@ -149,7 +149,7 @@ export default function HeroSection({ slides }: HeroSectionProps) {
             <motion.button
               key={index}
               className={`w-2 h-2 rounded-full ${
-                currentSlide === index ? 'bg-[#8B5CF6]' : 'bg-gray-400/30'
+                currentSlide === index ? 'bg-primary' : 'bg-gray-400/30'
               }`}
               onClick={() => setCurrentSlide(index)}
               whileHover={{ scale: 1.2 }}

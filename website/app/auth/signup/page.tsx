@@ -88,7 +88,7 @@ export default function SignupPage() {
         
         <div className="absolute top-40 -left-16 opacity-70 pointer-events-none">
           <motion.div
-            className="w-32 h-32 rounded-full bg-[#8B5CF6] opacity-20"
+            className="w-32 h-32 rounded-full bg-primary/10 opacity-20"
             variants={floatingVariants}
             initial="initial"
             animate="animate"
@@ -98,7 +98,7 @@ export default function SignupPage() {
 
         <div className="absolute -bottom-10 right-20 opacity-70 pointer-events-none">
           <motion.div 
-            className="w-24 h-24 rounded-full bg-[#0066FF] opacity-20"
+            className="w-24 h-24 rounded-full bg-primary/20 opacity-20"
             variants={floatingVariants}
             initial="initial"
             animate="animate"
@@ -112,7 +112,7 @@ export default function SignupPage() {
           style={{ perspective: '1000px' }}
         >
           <motion.div
-            className="w-full h-full border-4 border-[#8B5CF6] rounded-xl"
+            className="w-full h-full border-4 border-primary rounded-xl"
             variants={rotateVariants}
             initial="initial"
             animate="animate"
@@ -132,7 +132,7 @@ export default function SignupPage() {
             <Link href="/" className="inline-block">
               <motion.div
                 whileHover={{ rotate: 20 }}
-                className="bg-[#8B5CF6] p-2 rounded-xl inline-flex mb-2"
+                className="bg-primary p-2 rounded-xl inline-flex mb-2"
               >
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7 11C8.10457 11 9 10.1046 9 9C9 7.89543 8.10457 7 7 7C5.89543 7 5 7.89543 5 9C5 10.1046 5.89543 11 7 11Z" fill="white"/>
@@ -142,9 +142,9 @@ export default function SignupPage() {
               <h2 className="text-2xl font-bold text-gray-900 mt-2">Signapse</h2>
             </Link>
             <h2 className="mt-4 text-3xl font-extrabold text-gray-900">Create your account</h2>
-            <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-2 text-sm text-gray-600">
               Already have an account?{' '}
-              <Link href="/auth/login" className="font-medium text-[#8B5CF6] hover:text-[#7C3AED]">
+              <Link href="/auth/login" className="font-medium text-primary hover:text-primary-dark">
                 Sign in
               </Link>
             </p>
@@ -164,7 +164,7 @@ export default function SignupPage() {
                   type="text"
                   autoComplete="name"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-[#8B5CF6] focus:border-[#8B5CF6] focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   placeholder="Full name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -183,7 +183,7 @@ export default function SignupPage() {
                   type="email"
                   autoComplete="email"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-[#8B5CF6] focus:border-[#8B5CF6] focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   placeholder="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -202,7 +202,7 @@ export default function SignupPage() {
                   type="password"
                   autoComplete="new-password"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-[#8B5CF6] focus:border-[#8B5CF6] focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -220,7 +220,7 @@ export default function SignupPage() {
                   type="password"
                   autoComplete="new-password"
                   required
-                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-[#8B5CF6] focus:border-[#8B5CF6] focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                  className="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm transition-all duration-300 bg-white/50 backdrop-blur-sm"
                   placeholder="Confirm password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
@@ -236,7 +236,7 @@ export default function SignupPage() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-[#8B5CF6] hover:bg-[#7C3AED] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#8B5CF6] transition-all duration-300 disabled:opacity-70"
+                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 disabled:opacity-70"
                 >
                   {isLoading ? (
                     <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -251,11 +251,11 @@ export default function SignupPage() {
             
             <div className="text-sm text-center text-gray-600">
               By signing up, you agree to our{' '}
-              <a href="#" className="font-medium text-[#8B5CF6] hover:text-[#7C3AED]">
+              <a href="#" className="font-medium text-primary hover:text-primary-dark">
                 Terms of Service
               </a>{' '}
               and{' '}
-              <a href="#" className="font-medium text-[#8B5CF6] hover:text-[#7C3AED]">
+              <a href="#" className="font-medium text-primary hover:text-primary-dark">
                 Privacy Policy
               </a>
             </div>

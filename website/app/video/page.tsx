@@ -24,7 +24,7 @@ export default function VideoTranslation() {
             <Link href="/" className="flex items-center">
               <motion.div
                 whileHover={{ rotate: 20 }}
-                className="bg-[#A78BFA] p-2 rounded-xl"
+                className="bg-primary/10 p-2 rounded-xl"
               >
                 <Image 
                   src="/images/hand-icon.svg"
@@ -70,8 +70,8 @@ export default function VideoTranslation() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">How it Works</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
-                    <span className="text-[#8B5CF6] font-semibold">1</span>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold">1</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">Upload Your Video</h3>
@@ -79,8 +79,8 @@ export default function VideoTranslation() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
-                    <span className="text-[#8B5CF6] font-semibold">2</span>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold">2</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">AI Processing</h3>
@@ -88,8 +88,8 @@ export default function VideoTranslation() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center">
-                    <span className="text-[#8B5CF6] font-semibold">3</span>
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold">3</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">Download Result</h3>

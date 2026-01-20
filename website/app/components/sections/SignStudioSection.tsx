@@ -198,7 +198,7 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
               {/* Platform Header */}
               <div className="bg-[#1F2937] p-4">
                 <div className="flex items-center gap-2">
-                  <div className="bg-[#8B5CF6] rounded p-1">
+                  <div className="bg-primary rounded p-1">
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -273,10 +273,10 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => fileInputRef.current?.click()}
-                            className="flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-xl hover:border-[#A78BFA] hover:bg-gray-50 transition-all duration-200"
+                            className="flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary hover:bg-gray-50 transition-all duration-200"
                           >
-                            <div className="p-3 bg-[#A78BFA]/10 rounded-full mb-4">
-                              <svg className="w-8 h-8 text-[#A78BFA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="p-3 bg-primary/10 rounded-full mb-4">
+                              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                               </svg>
                             </div>
@@ -291,15 +291,15 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
                             className={`flex flex-col items-center justify-center p-8 border-2 border-dashed rounded-xl transition-all duration-200 ${
                               isRecording 
                                 ? 'border-red-400 bg-red-50' 
-                                : 'border-gray-200 hover:border-[#A78BFA] hover:bg-gray-50'
+                                : 'border-gray-200 hover:border-primary hover:bg-gray-50'
                             }`}
                           >
                             <div className={`p-3 rounded-full mb-4 ${
-                              isRecording ? 'bg-red-100' : 'bg-[#A78BFA]/10'
+                              isRecording ? 'bg-red-100' : 'bg-primary/10'
                             }`}>
                               <svg 
                                 className={`w-8 h-8 ${
-                                  isRecording ? 'text-red-500' : 'text-[#A78BFA]'
+                                  isRecording ? 'text-red-500' : 'text-primary'
                                 }`} 
                                 fill="none" 
                                 stroke="currentColor" 
@@ -337,10 +337,10 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           onClick={() => fileInputRef.current?.click()}
-                          className="w-full flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-xl hover:border-[#A78BFA] hover:bg-gray-50 transition-all duration-200"
+                          className="w-full flex flex-col items-center justify-center p-8 border-2 border-dashed border-gray-200 rounded-xl hover:border-primary hover:bg-gray-50 transition-all duration-200"
                         >
-                          <div className="p-3 bg-[#A78BFA]/10 rounded-full mb-4">
-                            <svg className="w-8 h-8 text-[#A78BFA]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <div className="p-3 bg-primary/10 rounded-full mb-4">
+                            <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                             </svg>
                           </div>
@@ -385,7 +385,7 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
                           <button
                             onClick={handleUpload}
                             disabled={isUploading}
-                            className={`w-full py-2 rounded-lg text-white font-medium ${isUploading ? 'bg-[#A78BFA]' : 'bg-[#8B5CF6] hover:bg-[#7C3AED]'} transition-colors`}
+                            className={`w-full py-2 rounded-lg text-white font-medium ${isUploading ? 'bg-primary' : 'bg-primary hover:bg-primary-dark'} transition-colors`}
                           >
                             {isUploading ? 'Uploading...' : 'Upload'}
                           </button>
@@ -394,7 +394,7 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
                           {isUploading && (
                             <div className="mt-2 h-2 w-full bg-gray-200 rounded-full overflow-hidden">
                               <div 
-                                className="h-full bg-[#8B5CF6] transition-all duration-300"
+                                className="h-full bg-primary transition-all duration-300"
                                 style={{ width: `${uploadProgress}%` }}
                               />
                             </div>
@@ -430,9 +430,9 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
             </p>
             
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-[#A78BFA]/10 rounded-lg">
-                  <svg className="w-6 h-6 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-start gap-4">
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
                 </div>
@@ -443,8 +443,8 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="p-2 bg-[#A78BFA]/10 rounded-lg">
-                  <svg className="w-6 h-6 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
@@ -455,8 +455,8 @@ export default function SignStudioSection({ id }: SignStudioSectionProps) {
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="p-2 bg-[#A78BFA]/10 rounded-lg">
-                  <svg className="w-6 h-6 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
                   </svg>
                 </div>
